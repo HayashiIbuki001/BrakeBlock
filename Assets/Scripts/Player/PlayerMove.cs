@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float speed = 1.0f;
-
     public Transform leftWall;
     public Transform rightWall;
 
