@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Block"))
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("Paddle"))
         {
@@ -57,7 +57,6 @@ public class Ball : MonoBehaviour
             }
 
             rb.linearVelocity = dir.normalized * speed;
-            Debug.Log("ƒpƒhƒ‹‚É”½ŽË");
         }
     }
 }
