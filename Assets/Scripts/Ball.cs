@@ -56,6 +56,7 @@ public class Ball : MonoBehaviour
                 dir.x = paddleRb.position.x * 0.2f;
             }
 
+            speed += 0.3f;
             rb.linearVelocity = dir.normalized * speed;
         }
     }
