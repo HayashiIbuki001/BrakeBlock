@@ -10,6 +10,16 @@ public class BlockPlaceManager : MonoBehaviour
 
     private void Start()
     {
+        Place();
+    }
+
+    private void Update()
+    {
+
+    }
+
+    public void Place()
+    {
         Vector2 startPos = transform.position;
         float OffsetRows = (rows - 1) * 0.5f * ySpace;
         float OffsetCols = (cols - 1) * 0.5f * xSpace;

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] private float speed = 5;
+    private float currentSpeed;
 
     public Transform paddle;
     public Rigidbody2D rb;
@@ -31,6 +32,7 @@ public class Ball : MonoBehaviour
     {
         isLaunch = true;
         rb.bodyType = RigidbodyType2D.Dynamic;
+        currentSpeed = speed;
 
         Vector2 dir = new Vector2(Random.Range(-0.5f, 0.5f), 1f);
         rb.linearVelocity = dir * speed;
@@ -56,8 +58,8 @@ public class Ball : MonoBehaviour
                 dir.x = paddleRb.position.x * 0.2f;
             }
 
-            speed += 0.3f;
-            rb.linearVelocity = dir.normalized * speed;
+            currentSpeed += 0.1f;
+            rb.linearVelocity = dir.normalized * currentSpeed;
         }
     }
 }

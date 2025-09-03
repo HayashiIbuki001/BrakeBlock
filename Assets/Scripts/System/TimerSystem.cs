@@ -15,12 +15,16 @@ public class TimerSystem : MonoBehaviour
 
     private void Update()
     {
-        currentTimer -= Time.deltaTime;
-        timerText.text = currentTimer.ToString("F2");
-
         if (currentTimer <= 0)
         {
+            currentTimer = 0;
             gameManager.GameOver();
         }
+        else
+        {
+            currentTimer -= Time.deltaTime;
+        }
+
+        timerText.text = currentTimer.ToString("F2");
     }
 }
